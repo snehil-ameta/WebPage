@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="cspPage.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Delicious">
+  <script type="text/javascript">
+  //work under process
+  	function clickCounter() 
+  	{
+			if (localStorage.clickcount) 
+			{
+	            localStorage.clickcount = Number(localStorage.clickcount)+1;
+	        } 
+	        else 
+	        {
+	            localStorage.clickcount = 1;
+	        }
+	        if(localStorage.clickcount!=undefined)
+			{
+	    	    document.getElementById("result").innerHTML =localStorage.clickcount;
+    		}
+    		else
+    		{
+    			document.getElementById("result").innerHTML =parseInt(0);	
+    		}
+	}
+
+	function commentTrack() 
+	{
+		var allComm = document.Comment.commentItem.value;
+		var currComm=localStorage.getItem("CommOne");
+		if(currComm=="")
+		{
+			var firstComm=allComm+"<br></br>";
+		}
+		else
+		{
+			var firstComm=allComm+"<br></br>"+currComm;
+		}
+		localStorage.setItem("CommOne",firstComm);
+		document.getElementById("SetComm").innerHTML=localStorage.getItem("CommOne");
+	}
+		
+	function showFeedback()
+	{
+		var numLk=localStorage.clickcount;
+			document.getElementById("result").innerHTML=numLk;
+			document.getElementById("SetComm").innerHTML=localStorage.getItem("CommOne");	
+	}
+
+  </script>
+</head>
+<body style="padding-top: 60px" onload="showFeedback()">
+	<div>
+		<nav class="navbar navbar-inverse navbar-fixed-top" >
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Animations</a>
+			</div>
+			<ul class="nav navbar-nav">
+			<li class="active"><a href="index.html">Home</a></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="">CSS Animations<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#first">First</a></li>
+					<li><a href="#second">Second</a></li>
+					<li><a href="#third">Third</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">JS Animations<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#firstj">First</a></li>
+					<li><a href="#secondj">Second</a></li>
+					<li><a href="#thirdj">Third</a></li>
+				</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+
+		<h1 class="fnt_del centered boldFont" style="float: left">Animations Using CSS</h1>
+		<a name="first"></a>
+		<div class="row" style="padding-top: 50px">
+			<div style="overflow: hidden; float: left;">
+			<h1 class="fnt_del centered"></h1>
+			<div id="backgP">
+				<div id="boxP1">
+					
+				</div>
+				<div id="boxP2">
+					
+				</div>
+				<div id="boxP3">
+					
+				</div>
+			</div>
+
+
+			</div>
+
+		</div>
+
+
+		
+		<a name="second"></a>
+		<div class="row" style="padding-top: 50px">
+			<div style="overflow: hidden; float: left;">
+			<h1 class="fnt_del centered"></h1>
+			<div id="backgP">
+				<div id="boxM">
+					
+				</div>
+				<div id="boxR">
+					
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<a name="third"></a>
+		<div class="row" style="padding-top: 50px">
+			<div style="overflow: hidden; float: left;">
+			<h1 class="fnt_del centered"></h1>
+			<div id="backstage">
+				<div id="car">
+					
+				</div>
+				<div id="ground">
+					
+				</div>
+				<div id="moon">
+					
+				</div>
+				<div id="sun">
+						
+				</div>
+				<div id="back">
+					
+				</div>
+			</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container">
+	</div>
+	<br><br>
+	<br><br>
+	<div class="container">
+		<h1 class="fnt_del centered  boldFont" style="float: left">Animations Using JS</h1>
+		<a name="firstj"></a>
+		<div class="row" style="padding-top: 50px">
+			<div style="overflow: hidden; float: left;">
+			<h1 class="fnt_del centered"></h1>
+				<div id="backgP">
+
+					<div id="roboHead">
+						
+					</div>
+
+					<div id="roboBody">
+					
+					</div>
+
+					<div id="roboLegs">
+					
+					</div>
+
+					<div id="roboHeadF">
+						
+					</div>
+
+					<div id="roboHands">
+						
+					</div>
+
+
+				</div>
+					
+
+				<a href="#/" class="play fnt_del centered" id="play-robo"><span class="ion ion-play"></span>Play</a>
+				<a href="./csp203l1.html" class="play fnt_del centered" id="reset-robo"><span class="ion ion-play"></span>Reset</a>
+
+				</div>
+
+				
+
+			</div>
+		</div>
+
+		<div class="container">
+		<a name="secondj"></a>
+		<div class="row" style="padding-top: 50px">
+			<div style="overflow: hidden; float: left;">
+			<h1 class="fnt_del centered"></h1>
+				<div id="backgP">
+
+					<div id="igT">
+					</div>	
+
+					<div id="pBag">
+					</div>
+
+					<div id="hang">
+					</div>
+
+				</div>
+			
+			<a href="#/" class="play fnt_del centered" id="play-end"><span class="ion ion-play"></span>Play</a>
+
+			</div>
+
+				
+			</div>
+
+			<div class="container">
+			<a name="thirdj"></a>
+		<div class="row" style="padding-top: 50px">
+			<div style="overflow: hidden; float: left;">
+			<h1 class="fnt_del centered"></h1>
+				<div id="backgP">
+
+					<div id="pb1">
+					</div>
+
+					<div id="pb2">
+					</div>
+
+					<div id="pb3">
+					</div>
+
+				</div>
+			
+			<a href="#/" class="play fnt_del centered" id="play-text"><span class="ion ion-play"></span>Play</a>
+			<a href="./csp203l1.html" class="play fnt_del centered" id="reset-text"><span class="ion ion-play"></span>Reset</a>
+
+			</div>
+
+				
+			</div>
+
+		</div>
+
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+
+		<div class="container">
+		<div class="row" style="padding-top: 50px">
+			<div style="overflow: hidden; float: left;">
+			<h1 class="fnt_del boldFont">Feedback</h1>
+
+					<div style="margin: auto;"> 
+						<p class="boldFont">Rate the animations</p>
+
+						<div >
+							<p><button onclick="clickCounter()" type="button" class="boldFont likeButton">Like</button></p>
+							<div id="result" class="boldFont"></div>
+							</div>
+						<div>
+					<div>
+						<form name="Comment">
+							<input type="text" name="commentItem" class="boldFont">
+							<input class="boldFont likeButton" type="button" value="Submit comment" onclick="commentTrack()">
+						</form>
+
+					<div id="SetComm" class="boldFont"></div>
+					</div>
+
+					</div>
+
+			</div>
+
+			</div>
+
+		</div>
+
+		<br><br>
+		<br><br>
+
+
+	</div>
+
+
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/.11.3/jquery.min.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='http://julian.com/research/velocity/build/velocity.min.js'></script>
+	<script src='http://julian.com/research/velocity/build/velocity.ui.min.js'></script>
+	<script src="animations.js"></script>
+	<script src="velocity.js"></script>
+	<script src="velocity.ui.js"></script>
+</body>
+</html>

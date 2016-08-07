@@ -1,0 +1,47 @@
+
+.likeButton
+{
+	background-color: #F52C48;
+  border-radius: 10%;
+  height: 30px;
+}
+
+body
+{
+	background-image: url("bodyBack.jpg");
+  background-size: cover;
+}
+
+.fnt_del
+{
+	font-family: 'Delicious', serif;
+	font-size: 48px;
+}
+
+.centered
+{
+	text-align: center;
+}
+
+
+.play {
+  color: #AAB2BD;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  width: 80px;
+  margin-bottom: 30px;
+  margin-right: 5px;
+  border-radius: 30px;
+}
+.play:hover {
+  color: #656D78;
+}
+
+.boldFont
+{
+  font-weight: bold;
+}
+
